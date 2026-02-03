@@ -1,6 +1,6 @@
 # プロジェクト作成
 
-- npx create-react-app react-app
+- npx create-react-app react-app --no-git
 
 # docker-compose.yml作成
 
