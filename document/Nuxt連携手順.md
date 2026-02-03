@@ -1,0 +1,28 @@
+# ローカルで Nuxt プロジェクト作成
+
+npx nuxi init . --no-git
+
+# docker-compose.yml 作成
+
+```bash
+cat << 'EOF' > docker-compose.yml
+version: '3.8'
+
+services:
+  nuxt:
+    image: node:20
+    container_name: nuxt-container
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    command: >
+      sh -c "npm install && npm run dev -- --hostname 0.0.0.0"
+    user: "${UID}:${GID}"
+EOF
+```
+
+# docker 起動
+
+docker compose up
