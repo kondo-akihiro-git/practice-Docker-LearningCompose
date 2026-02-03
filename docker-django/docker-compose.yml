@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  django:
+    image: python:3.12
+    container_name: django-container
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "pip install -r requirements.txt && python manage.py runserver 0.0.0.0:8000"
+    user: "${UID}:${GID}"

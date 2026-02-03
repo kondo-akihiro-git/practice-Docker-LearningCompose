@@ -65,3 +65,21 @@ venv/
 env/
 *.env
 *.env.*
+
+# Django specific
+*.pyc
+__pycache__/
+db.sqlite3
+*.log
+*.pot
+*.mo
+*.py[cod]
+*.swp
+*.DS_Store
+*.egg-info/
+*.egg
+.mypy_cache/
+.pytest_cache/
+.env
+local_settings.py
+__init__.py
