@@ -15,7 +15,6 @@ services:
 
 volumes:
   ollama-data:
-
 ```
 
 # dockerを起動
@@ -34,7 +33,7 @@ curl http://localhost:11434/api/generate \
     "model": "llama3",
     "prompt": "Dockerとは何ですか？"
   }'
-
+# 返却値はストリーミング形式なので読みづらいかもしれないです。
 ```
 
 - docker compose down -v
