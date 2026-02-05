@@ -50,4 +50,4 @@ volumes:
 
 # 動作確認
 
-- document/Minio連携手順.md
+- dagsのPythonが定期実行されるので、logに出力されていることを確認する
